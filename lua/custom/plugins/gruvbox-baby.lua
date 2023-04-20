@@ -23,13 +23,13 @@ return {
             theme = 'gruvbox-baby',
             -- ... your barbecue config
             }
-            require('lualine').setup {
-                options = {
-                    -- ... your lualine config
-                    theme = 'gruvbox-baby'
-                    -- ... your lualine config
-                },
-        }
+        --     require('lualine').setup {
+        --         options = {
+        --             -- ... your lualine config
+        --             theme = 'gruvbox-baby'
+        --             -- ... your lualine config
+        --         },
+        -- }
     end
     -- Example config in Lua
 }

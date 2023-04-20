@@ -128,19 +128,22 @@ require('lazy').setup({
     end,
   },
 
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
-  },
+  -- {
+  --   -- Set lualine as statusline
+  --   'nvim-lualine/lualine.nvim',
+  --   -- See `:help lualine.txt`
+  --   config = function()
+  --     require("lua.custom.plugins.lualine")
+  --   end
+  --   opts = {
+  --     options = {
+  --       icons_enabled = true,
+  --       theme = "tokyonight",
+  --        component_separators = '|',
+  --        section_separators = '',
+  --      },
+  --   },
+  -- },
 
   {
     -- Add indentation guides even on blank lines
@@ -367,7 +370,7 @@ vim.keymap.set('n', '<leader>lj', vim.diagnostic.goto_prev, { desc = "Go to prev
 vim.keymap.set('n', '<leader>lk', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set('n', '<leader>ld', ":Telescope diagnostics<cr>", { silent = true})
+vim.keymap.set('n', '<leader>ld', ":Telescope diagnostics<cr>", { silent = true })
 
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
