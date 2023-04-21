@@ -11,9 +11,9 @@ vim.keymap.set("n", "<leader>ww", ":w<cr>", { desc = 'save buffer', silent = tru
 vim.keymap.set("n", "<leader>qq", ":q!<cr>", { desc = "exit force", silent = true })
 vim.keymap.set("n", "<leader>wq", ":wq<cr>", { desc = "save and exit", silent = true })
 vim.keymap.set("n", "|", ":split<cr>", { silent = true })
-vim.keymap.set("n", "[tn", ":tabnew<cr>", { desc = "new tabe", silent = true })
-vim.keymap.set("n", "[tz", ":tabnew %<cr>", { desc = "tabe zoom", silent = true })
-vim.keymap.set("n", "]tz", ":tabclose<cr>", { desc = "zoom out tabe", silent = true })
+vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", { desc = "new tabe", silent = true })
+vim.keymap.set("n", "<leader>tz", ":tabnew %<cr>", { desc = "tabe zoom", silent = true })
+vim.keymap.set("n", "<leader>tzo", ":tabclose<cr>", { desc = "zoom out tabe", silent = true })
 vim.keymap.set("n", "<leader>f", ":Telescope git_files<cr>", { desc = 'git files search', silent = true })
 vim.cmd("nnoremap Q <c-v>")
 
@@ -38,8 +38,8 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>w', { noremap = true, silent = true 
 -- vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
 
-vim.api.nvim_set_keymap("n", "<leader>o", ":NeoTreeFloatToggle<cr>", { silent = true })
-vim.api.nvim_set_keymap("n", "[e", ":NeoTreeShowToggle <cr>", { silent = true })
+vim.keymap.set("n", "<leader>o", ":NeoTreeFloatToggle<cr>", { silent = true })
+vim.keymap.set("n", "<leader>e", ":NeoTreeShowToggle<cr>", {desc="open neotree fileManger", silent = true })
 --vim.keymap.set("n", "@", ":ZenMode<cr>", { silent = true })
 ----bindding neoscroll to pageup and ScrollWheelUp ....
 vim.cmd(":map <ScrollWheelUp> <C-u>")
