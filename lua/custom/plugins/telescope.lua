@@ -4,18 +4,26 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim'
   },
-
   config = function()
-  require('telescope').setup {
-    defaults = {
-      mappings = {
-        i = {
-          ["<C-h>"] = "which_key"
+    require('telescope').setup {
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-h>"] = "which_key"
+          }
         }
-      }
-    },
-    pickers = {},
-    extensions = {}
-  }
+      },
+      pickers = {},
+      extensions = {
+        media_files = {
+          -- filetypes whitelist
+          -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+          filetypes = { "png", "webp", "jpg", "jpeg" },
+          -- find command (defaults to `fd`)
+          find_cmd = "rg",
+        }
+      },
+    }
   end
 }
+
