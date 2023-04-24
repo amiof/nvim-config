@@ -14,13 +14,14 @@ return {
     vim.g.rnvimr_edit_cmd = 'drop'
 
     -- Disable a border for floating window
-    vim.g.rnvimr_draw_border = 0
+    vim.g.rnvimr_draw_border = 1
 
     -- Hide the files included in gitignore
     vim.g.rnvimr_hide_gitignore = 1
 
     -- " Change the border's color
     -- vim.g.rnvimr_border_attr = {'fg': 14, 'bg': -1}
+    vim.g.rnvimr_border_attr = { fg = 14, bg = -1 }
 
     -- " Make Neovim wipe the buffers corresponding to the files deleted by Ranger
     vim.g.rnvimr_enable_bw = 1
@@ -29,8 +30,8 @@ return {
     vim.g.rnvimr_shadow_winblend = 70
 
     -- " Draw border with both
+    -- vim.g.rnvimr_ranger_cmd = { 'ranger', '--cmd=set draw_borders both' }
     vim.g.rnvimr_ranger_cmd = { 'ranger', '--cmd=set draw_borders both' }
-
     -- " Link CursorLine into RnvimrNormal highlight in the Floating window
     -- highlight link RnvimrNormal CursorLine
 
