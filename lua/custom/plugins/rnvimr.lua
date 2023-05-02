@@ -41,7 +41,23 @@ return {
     vim.api.nvim_set_keymap('t', '<M-i>', '<C-\\><C-n>:RnvimrResize<CR>', { silent = true })
     -- vim.api.nvim_set_keymap('t', '<M-l>', '<C-\\><C-n>:RnvimrResize 1,8,9,11,5<CR>', { silent = true })
     -- vim.api.nvim_set_keymap('t', '<M-y>', '<C-\\><C-n>:RnvimrResize 6<CR>', { silent = true })
-
+    --
+    --
+    --
+    -- " Map Rnvimr action   --
+    vim.g.rnvimr_action = {
+      ['<C-t>'] = 'NvimEdit tabedit',
+      ['<C-x>'] = 'NvimEdit split',
+      ['<C-v>'] = 'NvimEdit vsplit',
+      ['gw'] = 'JumpNvimCwd',
+      ['yw'] = 'EmitRangerCwd'
+    }
+    --" Add views for Ranger to adapt the size of floating window
+    vim.g.rnvimr_ranger_views = {
+      { minwidth = 90, ratio = {} },
+      { minwidth = 50, maxwidth = 89, ratio = { 1, 1 } },
+      { maxwidth = 49, ratio = { 1 } }
+    }
     vim.g.rnvimr_layout = {
       relative = 'editor',
       width = vim.fn.float2nr(vim.fn.round(0.7 * vim.o.columns)),

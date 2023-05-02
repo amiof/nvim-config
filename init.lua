@@ -517,6 +517,7 @@ require("luasnip.loaders.from_snipmate").lazy_load()
 require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/typescript" } }
 require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/rust" } }
 require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/python" } }
+require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/vue" } }
 ls.filetype_extend("all", { "_" })
 
 
