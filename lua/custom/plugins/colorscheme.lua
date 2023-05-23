@@ -50,7 +50,8 @@ return {
             })
             vim.cmd.colorscheme "tokyonight-night"
             -- vim.cmd.colorscheme "gruvbox-baby"
+            --
+            -- vim.cmd.colorscheme "lunar"
         end
     }
 }
-
