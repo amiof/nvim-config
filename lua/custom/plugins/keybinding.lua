@@ -51,3 +51,7 @@ vim.cmd(":map <ScrollWheelUp> <C-u>")
 vim.cmd(":map <ScrollWheelDown> <C-d>")
 vim.cmd(":map <PageDown> <C-d>")
 vim.cmd(":map <PageUp> <C-u>")
+
+
+
+
