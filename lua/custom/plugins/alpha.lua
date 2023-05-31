@@ -8,7 +8,7 @@ return {
             local dashboard = require("alpha.themes.dashboard")
             math.randomseed(os.time())
             local header_color = "AlphaCol" .. math.random(11)
-            local baner = require("custom.plugins.banner").dashboard()
+            local baner = require("Config.banner").dashboard()
             --  local logo = baner
             dashboard.section.header.val = baner
             --            dashboard.section.header.val = vim.split(logo, "\n")

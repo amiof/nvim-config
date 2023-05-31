@@ -12,7 +12,8 @@ return {
               filetype = "NvimTree",
               text = "File Explorer",
               highlight = "Directory",
-              separator = false -- use a "true" to enable the def
+              text_align = "left",
+              separator = true -- use a "true" to enable the def
             }
           },
         }
@@ -20,4 +21,3 @@ return {
     end
   }
 }
-
