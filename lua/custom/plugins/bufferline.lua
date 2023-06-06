@@ -17,21 +17,22 @@ return {
             delay = 200,
             reveal = { 'close' }
           },
-            indicator = {
-                icon = '▎', -- this should be omitted if indicator style is not 'icon'
-                style = "icon"--'icon' | 'underline' | 'none',
-            },
+          indicator = {
+            icon = '▎',      -- this should be omitted if indicator style is not 'icon'
+            style = "icon"     --'icon' | 'underline' | 'none',
+          },
           offsets = {
             {
               filetype = "NvimTree",
               text = "File Explorer",
-              separator = true ,-- use a "true" to enable the def
-              text_aligin="left",
+              separator = true,  -- use a "true" to enable the def
+              text_aligin = "left",
             }
           },
           separator_style = "slope", --thin or slope or thick or slant padded_slant
         }
       }
-    end
+    end,
   }
 }
+
