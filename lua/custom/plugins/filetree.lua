@@ -69,7 +69,7 @@ return {
           last_indent_marker = "└",
           highlight = "NeoTreeIndentMarker",
           -- expander config, needed for nesting files
-          with_expanders = nil, -- if nil and file nesting is enabled, will enable expanders
+          with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
           expander_collapsed = "",
           expander_expanded = "",
           expander_highlight = "NeoTreeExpander",
@@ -96,8 +96,8 @@ return {
         git_status = {
           symbols = {
             -- Change type
-            added     = "",  -- or "✚", but this is redundant info if you use git_status_colors on the name
-            modified  = "",  -- or "", but this is redundant info if you use git_status_colors on the name
+            added     = "✚", -- or "✚", but this is redundant info if you use git_status_colors on the name
+            modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
             deleted   = "✖", -- this can only be used in the git_status source
             renamed   = "", -- this can only be used in the git_status source
             -- Status type
@@ -108,39 +108,37 @@ return {
             conflict  = "",
           }
         },
-        document_symbols = {
-          kinds = {
-            File = { icon = "󰈙", hl = "Tag" },
-            Namespace = { icon = "󰌗", hl = "Include" },
-            Package = { icon = "󰏖", hl = "Label" },
-            Class = { icon = "󰌗", hl = "Include" },
-            Property = { icon = "󰆧", hl = "@property" },
-            Enum = { icon = "󰒻", hl = "@number" },
-            Function = { icon = "󰊕", hl = "Function" },
-            String = { icon = "󰀬", hl = "String" },
-            Number = { icon = "󰎠", hl = "Number" },
-            Array = { icon = "󰅪", hl = "Type" },
-            Object = { icon = "󰅩", hl = "Type" },
-            Key = { icon = "󰌋", hl = "" },
-            Struct = { icon = "󰌗", hl = "Type" },
-            Operator = { icon = "󰆕", hl = "Operator" },
-            TypeParameter = { icon = "󰊄", hl = "Type" },
-            StaticMethod = { icon = '󰠄 ', hl = 'Function' },
-          }
-        },
+        -- document_symbols = {
+        --   kinds = {
+        --     File = { icon = "󰈙", hl = "Tag" },
+        --     Namespace = { icon = "󰌗", hl = "Include" },
+        --     Package = { icon = "󰏖", hl = "Label" },
+        --     Class = { icon = "󰌗", hl = "Include" },
+        --     Property = { icon = "󰆧", hl = "@property" },
+        --     Enum = { icon = "󰒻", hl = "@number" },
+        --     Function = { icon = "󰊕", hl = "Function" },
+        --     String = { icon = "󰀬", hl = "String" },
+        --     Number = { icon = "󰎠", hl = "Number" },
+        --     Array = { icon = "󰅪", hl = "Type" },
+        --     Object = { icon = "󰅩", hl = "Type" },
+        --     Key = { icon = "󰌋", hl = "" },
+        --     Struct = { icon = "󰌗", hl = "Type" },
+        --     Operator = { icon = "󰆕", hl = "Operator" },
+        --     TypeParameter = { icon = "󰊄", hl = "Type" },
+        --     StaticMethod = { icon = '󰠄 ', hl = 'Function' },
+        --   }
+        -- },
       },
-      source_selector = {
-        winbar = true,
-        statusline = true,
-        buffers = true,
-        document_symbols = true,
-        sources = {
-          { source = "filesystem",       display_name = " 󰉓 Files " },
-          { source = "git_status",       display_name = " 󰊢 Git " },
-          { source = "buffers",          display_name = " 󰈙 Buffers" },
-          { source = "document_symbols", display_name = " 󰈙 symbols" },
-        },
-      },
+      -- source_selector = {
+      --   winbar = true,
+      --   statusline = false,
+      --   -- document_symbols = true,
+      --   sources = {
+      --     { source = "filesystem", display_name = "󰉓 Files" },
+      --     { source = "git_status", display_name = "󰊢 Git" },
+      --     { source = "buffers",    display_name = "󰈙 Buffers" },
+      --   },
+      -- },
       window = {
         position = "left",
         width = 40,
