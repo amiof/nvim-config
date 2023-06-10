@@ -22,8 +22,9 @@ vim.opt.arabicshape = true
 -- vim.opt.arabic = true
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 
+
 --------fold for better fold in ufo dont need
-vim.opt.fillchars = { fold = "=" }
+vim.opt.fillchars = { fold = "=",eob = " " }
 vim.opt.foldmethod = "indent"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 2
