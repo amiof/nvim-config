@@ -20,14 +20,10 @@ local mappings = {
   -- ["w"] = { "<cmd>update!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["f"] = { "", "format code" },
-
   u = { name = "delete all notification" },
   s = {
     name = "serarch",
-    s = { "", "git file search" },
-
   },
-
   c = {
     name = "crate rust",
   },
@@ -40,14 +36,14 @@ local mappings = {
   x = {
     name = "Trouble",
   },
-  q={
-name="quite and..."
+  q = {
+    name = "quite and..."
   },
-  l={
-    name="dianotics and ..."
+  l = {
+    name = "dianotics and ..."
   },
-  h={
-    name="git...",
+  h = {
+    name = "git...",
   }
 
 
