@@ -533,6 +533,7 @@ ls.filetype_extend("all", { "_" })
 require("Config.keybinding")
 require("Config.option")
 require("Config.icons")
+require("Config.keybinding-config")
 --themes
 vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "gruvbox-baby"
