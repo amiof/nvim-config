@@ -7,8 +7,8 @@ vim.keymap.set("n", "m", ":BufferLineCycleNex<cr>", { silent = true })
 vim.keymap.set("n", "M", ":BufferLineCyclePrev<cr>", { silent = true })
 vim.keymap.set("n", "<leader>cc", ":bd!<cr>", { desc = "close buffer force", silent = true })
 vim.keymap.set("n", "\\", ":vsplit<cr>", { silent = true })
-vim.keymap.set("n", "<leader>tk", ":windo wincmd K<cr>", {desc = "change window to horizontall", silent = true })
-vim.keymap.set("n", "<leader>th", ":windo wincmd H<cr>", { desc = "change window to vertiacl",silent = true })
+vim.keymap.set("n", "<leader>tk", ":windo wincmd K<cr>", { desc = "change window to horizontall", silent = true })
+vim.keymap.set("n", "<leader>th", ":windo wincmd H<cr>", { desc = "change window to vertiacl", silent = true })
 vim.keymap.set("n", "<leader>ww", ":w<cr>", { desc = 'save buffer', silent = true })
 vim.keymap.set("n", "<leader>no", ":noh<cr>", { desc = 'clear search highlight', silent = true })
 vim.keymap.set("n", "<leader>qq", ":q!<cr>", { desc = "exit force", silent = true })
@@ -53,3 +53,41 @@ vim.cmd(":map <ScrollWheelUp> <C-u>")
 vim.cmd(":map <ScrollWheelDown> <C-d>")
 vim.cmd(":map <PageDown> <C-d>")
 vim.cmd(":map <PageUp> <C-u>")
+
+
+
+-------------carate config for rust
+
+local crates = require('crates')
+
+vim.keymap.set('n', '<leader>ct', crates.toggle, { desc = "rust crate toggle", silent = true })
+vim.keymap.set('n', '<leader>cr', crates.reload, { desc = "rust crate reload", silent = true })
+vim.keymap.set('n', '<leader>cv', crates.show_versions_popup, { desc = "rust crate show versions", silent = true })
+vim.keymap.set('n', '<leader>cf', crates.show_features_popup, { desc = "rust crate show features", silent = true })
+vim.keymap.set('n', '<leader>cd', crates.show_dependencies_popup,
+    { desc = "rust crate show dependencies", silent = true })
+-- vim.keymap.set('n', '<leader>cu', crates.update_crate, { desc = "rust crate update", silent = true })
+-- vim.keymap.set('v', '<leader>cu', crates.update_crates, { desc = "rust create update", silent = true })
+-- -- vim.keymap.set('n', '<leader>ca', crates.update_all_crates, { desc = "update all crate", silent = true })
+-- vim.keymap.set('n', '<leader>cU', crates.upgrade_crate, { desc = "rust crate update", silent = true })
+-- vim.keymap.set('v', '<leader>cU', crates.upgrade_crates, { desc = "rust crate update", silent = true })
+-- vim.keymap.set('n', '<leader>cA', crates.upgrade_all_crates, { desc = "rust open neotree FileManger", silent = true })
+
+vim.keymap.set('n', '<leader>cH', crates.open_homepage, { desc = "open rust home page", silent = true })
+vim.keymap.set('n', '<leader>cR', crates.open_repository, { desc = "open rust crate repository", silent = true })
+vim.keymap.set('n', '<leader>cD', crates.open_documentation, { desc = "open rust documentaion", silent = true })
+vim.keymap.set('n', '<leader>cC', crates.open_crates_io, { desc = "open rust crate.io", silent = true })
+local function show_documentation()
+    local filetype = vim.bo.filetype
+    if vim.tbl_contains({ 'vim', 'help' }, filetype) then
+        vim.cmd('h ' .. vim.fn.expand('<cword>'))
+    elseif vim.tbl_contains({ 'man' }, filetype) then
+        vim.cmd('Man ' .. vim.fn.expand('<cword>'))
+    elseif vim.fn.expand('%:t') == 'Cargo.toml' and require('crates').popup_available() then
+        require('crates').show_popup()
+    else
+        vim.lsp.buf.hover()
+    end
+end
+
+vim.keymap.set('n', '<leader>cK', show_documentation, { desc = "show more package doc", silent = true })

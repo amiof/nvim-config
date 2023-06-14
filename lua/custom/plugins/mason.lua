@@ -6,16 +6,16 @@ return {
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
 
     config = function()
-    require("mason").setup({
-      ui = {
-        border = "rounded", -- set to "none" to remover border
-        icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗"
-        }
-      }
-    })
+      require("mason").setup({
+        ui = {
+          border = "rounded", -- set to "none" to remover border
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+          }
+        },
+      })
     end
   },
 
@@ -23,20 +23,25 @@ return {
     "williamboman/mason-lspconfig.nvim",
 
     config = function()
-    require("mason-lspconfig").setup({
-      ensure_installed = {
-        "html",
-        "cssls",
-        "eslint",
-        "tsserver",
-        "emmet_ls",
-        "jsonls",
-        "pyright",
-        "yamlls",
-        "bashls",
-      },
-      automatic_installation = true,
-    })
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "html",
+          "cssls",
+          "eslint",
+          "tsserver",
+          "emmet_ls",
+          "jsonls",
+          "pyright",
+          "yamlls",
+          "bashls",
+          "tailwindcss",
+          "prettier",
+          "codespell",
+          "flake8",
+          "rust-analyzer",
+        },
+        automatic_installation = true,
+      })
     end
   }
 }
