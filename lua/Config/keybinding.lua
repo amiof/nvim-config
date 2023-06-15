@@ -91,3 +91,18 @@ local function show_documentation()
 end
 
 vim.keymap.set('n', '<leader>cK', show_documentation, { desc = "show more package doc", silent = true })
+
+
+----------confgi for rust neotest 
+vim.keymap.set( 'n', "<leader>ltF", ":lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", { desc = "Debug File" ,silent = true  })
+vim.keymap.set( 'n', "<leader>ltL", ":lua require('neotest').run.run_last({strategy = 'dap'})<cr>", { desc = "Debug Last" ,silent = true} )
+vim.keymap.set( 'n', "<leader>lta", ":lua require('neotest').run.attach()<cr>", { desc = "Attach",silent = true } )
+vim.keymap.set( 'n',"<leader>ltf", ":lua require('neotest').run.run(vim.fn.expand('%'))<cr>", { desc = "File" ,silent = true} )
+vim.keymap.set( 'n',"<leader>ltl", ":lua require('neotest').run.run_last()<cr>", { desc = "Last" ,silent = true} )
+vim.keymap.set( 'n',"<leader>ltn", ":lua require('neotest').run.run()<cr>", { desc = "Nearest" ,silent = true} )
+vim.keymap.set( 'n',"<leader>ltN", ":lua require('neotest').run.run({strategy = 'dap'})<cr>", { desc = "Debug Nearest" ,silent = true} )
+vim.keymap.set( 'n',"<leader>lto", ":lua require('neotest').output.open({ enter = true })<cr>", { desc = "Output" ,silent = true} )
+vim.keymap.set( 'n',"<leader>lts", ":lua require('neotest').run.stop()<cr>", { desc = "Stop" ,silent = true} )
+vim.keymap.set( 'n',"<leader>ltS", ":lua require('neotest').summary.toggle()<cr>", { desc = "Summary" ,silent = true} )
+
+

@@ -40,11 +40,13 @@ local mappings = {
     name = "quite and..."
   },
   l = {
-    name = "dianotics and ..."
+    name = "dianotics and ...",
+    t= {name = "[t]est whit neotest"}
   },
   h = {
     name = "git...",
   }
+
 
 
 
