@@ -19,6 +19,7 @@ vim.keymap.set("n", "<leader>tz", ":tabnew %<cr>", { desc = "tabe zoom", silent 
 vim.keymap.set("n", "<leader>tzo", ":tabclose<cr>", { desc = "zoom out tabe", silent = true })
 vim.keymap.set("n", "<leader>ss", ":Telescope git_files<cr>", { desc = 'git files search', silent = true })
 vim.keymap.set("n", "<leader>m", ":lua require('telescope').extensions.media_files.media_files()<cr>",
+
     { desc = 'telescope show media files', silent = true })
 
 
@@ -46,7 +47,7 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>w', { noremap = true, silent = true 
 
 
 vim.keymap.set("n", "<leader>o", ":NeoTreeFloatToggle<CR>", { desc = "open neotree float", silent = true })
-vim.keymap.set("n", "<leader>ee", ":NeoTreeShowToggle<CR>", { desc = "open neotree FileManger", silent = true })
+vim.keymap.set("n", "<leader>e", ":NeoTreeShowToggle<CR>", { desc = "open neotree FileManger", silent = true })
 --vim.keymap.set("n", "@", ":ZenMode<cr>", { silent = true })
 ----bindding neoscroll to pageup and ScrollWheelUp ....
 vim.cmd(":map <ScrollWheelUp> <C-u>")
@@ -105,4 +106,6 @@ vim.keymap.set( 'n',"<leader>lto", ":lua require('neotest').output.open({ enter 
 vim.keymap.set( 'n',"<leader>lts", ":lua require('neotest').run.stop()<cr>", { desc = "Stop" ,silent = true} )
 vim.keymap.set( 'n',"<leader>ltS", ":lua require('neotest').summary.toggle()<cr>", { desc = "Summary" ,silent = true} )
 
+---------------lazygit 
 
+vim.keymap.set("n", "<leader>hg", ":LazyGit<cr>", { desc = 'open Lazygit', silent = true })
