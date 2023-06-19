@@ -73,6 +73,7 @@
   "rnvimr": { "branch": "main", "commit": "50a36ff2e7cda1f727cb8607f8e791cebd4fa7b1" },
   "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
   "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "65565c62963579897d28390dbd1ba8fb15ba545f" },
+  "telescope-ag": { "branch": "main", "commit": "7d25064da3c7689461bcfa89ad1f08548415193d" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "9bc8237565ded606e6c366a71c64c0af25cd7a50" },
   "telescope-media-files.nvim": { "branch": "master", "commit": "0826c7a730bc4d36068f7c85cf4c5b3fd9fb570a" },
   "telescope-project.nvim": { "branch": "master", "commit": "7c64b181dd4e72deddcf6f319e3bf1e95b2a2f30" },
