@@ -22,7 +22,8 @@ vim.keymap.set("n", "<leader>m", ":lua require('telescope').extensions.media_fil
     { desc = 'telescope show media files', silent = true })
 
 
-vim.cmd("nnoremap Q <c-v>")
+-------wheh ctl-v not work in wsl
+-- vim.cmd("nnoremap Q <c-v>")
 
 -- Resize window vertically
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +3<CR>', { noremap = true, silent = true })
