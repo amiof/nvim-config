@@ -19,33 +19,43 @@ local opts = {
 local mappings = {
   -- ["w"] = { "<cmd>update!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["f"] = { "", "format code" },
-  u = { name = "delete all notification" },
+  ["f"] = { "", " 󰸱 format code" },
+  u = { name = " 󰎟 delete all notification" },
   s = {
-    name = "serarch",
+    name = "  serarch",
   },
   c = {
-    name = "crate rust",
+    name = "  crate rust",
   },
   w = {
-    name = "lsp workspace",
+    name = " 󰬱 lsp workspace",
   },
   t = {
-    name = "Tabs",
+    name = "  Tabs",
   },
   x = {
-    name = "Trouble",
+    name = "  Trouble",
   },
   q = {
-    name = "quite and..."
+    name = "  quite"
   },
   l = {
-    name = "dianotics and ...",
-    t= {name = "[t]est whit neotest"}
+    name = "  dianotics",
+    t= {name = " 󰙨 [t]est whit neotest"}
   },
   h = {
-    name = "git...",
+    name = " 󰊢 git",
+  },
+  r = {
+  name = " 󰑕 lsp rename"
+  },
+  d={
+    name="   document symbol"
+  },
+  n= {
+    name = " disable search highlight"
   }
+
 
 
 
