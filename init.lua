@@ -538,3 +538,5 @@ require("Config.whichkey-config")
 vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "gruvbox-baby"
 -- vim.cmd.colorscheme "lunar"
+-- add ag for telescope for telescope-ag plugin
+require("telescope").load_extension("ag")
