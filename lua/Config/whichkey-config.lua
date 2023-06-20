@@ -17,9 +17,7 @@ local opts = {
 }
 
 local mappings = {
-  -- ["w"] = { "<cmd>update!<CR>", "Save" },
-  -- ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["f"] = { "", " 󰸱 format code" },
+  ['f'] = { "", "󰸱  format code" },
   u = { name = " 󰎟 delete all notification" },
   s = {
     name = "  serarch",
@@ -41,25 +39,28 @@ local mappings = {
   },
   l = {
     name = "  dianotics",
-    t= {name = " 󰙨 [t]est whit neotest"}
+    t = { name = " 󰙨 [t]est whit neotest" }
   },
   h = {
     name = " 󰊢 git",
   },
   r = {
-  name = " 󰑕 lsp rename"
+    name = " 󰑕 lsp rename"
   },
-  d={
-    name="   document symbol"
+  d = {
+    name = "   document symbol"
   },
-  n= {
-    name = " disable search highlight"
-  }
+  n = {
+    name = "  disable search highlight"
+  },
 
 
 
 
 
+  -- ["w"] = { "<cmd>update!<CR>", "Save" },
+  -- ["q"] = { "<cmd>q!<CR>", "Quit" },
+  -- ["f"] = { "", " 󰸱 format code"},
 
   -- z = {
   --   name = "Packer",
