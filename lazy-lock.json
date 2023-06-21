@@ -29,7 +29,7 @@
   "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6ec01" },
   "lazy.nvim": { "branch": "main", "commit": "f145e6f42a56306c5536e9efbfe41f7efbec285d" },
   "lazygit.nvim": { "branch": "main", "commit": "3466e48439601445e26c65635421625886f2d0c0" },
-  "live-server": { "branch": "main", "commit": "2e7dd7db3f59085de2078b53ea50c2f863825784" },
+  "live-server.nvim": { "branch": "main", "commit": "8cae0641cabe8c555311f09dbb0ae36a513a9d5c" },
   "lsp-inlayhints.nvim": { "branch": "main", "commit": "3700e6458fb1702c12a7e33037fb17f649679552" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
   "lunar.nvim": { "branch": "master", "commit": "08bbc93b96ad698d22fc2aa01805786bcedc34b9" },
