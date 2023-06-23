@@ -30,6 +30,8 @@ local mappings = {
   },
   t = {
     name = "  Tabs",
+   b={"toggle cureent line blame"}, 
+   d={"toggle deleted"}, 
   },
   x = {
     name = "  Trouble",
@@ -43,12 +45,21 @@ local mappings = {
   },
   h = {
     name = " 󰊢 git",
+    b = { "blame line" },
+    D = { "diff this ~" },
+    d = { "diff this" },
+    R = { "reset buffer" },
+    u = { "undo stage hunk" },
+    S = { "stage buffer" },
+    p= {"previwe changes"},
+
   },
   r = {
     name = " 󰑕 lsp rename"
   },
   d = {
-    name = "   document symbol"
+    name = "   document symbol",
+    b={"add [B]reakpoint for debug"}
   },
   n = {
     name = "  disable search highlight"
