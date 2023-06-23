@@ -30,8 +30,8 @@ local mappings = {
   },
   t = {
     name = "  Tabs",
-   b={"toggle cureent line blame"}, 
-   d={"toggle deleted"}, 
+   b={"toggle cureent line blame"},
+   d={"toggle deleted"},
   },
   x = {
     name = "  Trouble",
