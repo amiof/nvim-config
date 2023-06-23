@@ -534,9 +534,12 @@ require("Config.keybinding")
 require("Config.option")
 require("Config.icons")
 require("Config.whichkey-config")
+require("kickstart.plugins.autoformat")
 --themes
 vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "gruvbox-baby"
 -- vim.cmd.colorscheme "lunar"
 -- add ag for telescope for telescope-ag plugin
 require("telescope").load_extension("ag")
+vim.fn.sign_define("DapBreakpoint", { text = " ", texthl = "", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "⭐️", texthl = "", linehl = "", numhl = "" })
