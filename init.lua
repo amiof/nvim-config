@@ -541,7 +541,7 @@ vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "lunar"
 -- add ag for telescope for telescope-ag plugin
 require("telescope").load_extension("ag")
-vim.fn.sign_define("DapBreakpoint", { text = " ", texthl = "bug", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "bug", linehl = "", numhl = "" })
 vim.cmd("highlight bug guifg=#ff0000")
 vim.fn.sign_define("DapStopped", { text = " ", texthl = "arrow", linehl = "", numhl = "" })
 vim.cmd("highlight arrow guifg=#ffff00")
