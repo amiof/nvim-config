@@ -76,6 +76,12 @@ vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 --
 --
 --
+--code spell--------------------------------
+-- vim.o.spellfile = vim.o.runtimepath .. "/spell/en.utf-8.add"
+-- vim.env.SPELLHOME = vim.fn.stdpath("data") .. "/spell"
+vim.opt.spell = false
+vim.opt.spelllang = "en"
+-----------------end code spell----------------------
 vim.opt.autowrite = true           -- Enable auto write
 vim.opt.clipboard = "unnamedplus"  -- Sync with system clipboard
 vim.opt.completeopt = "menu,menuone,noselect"
