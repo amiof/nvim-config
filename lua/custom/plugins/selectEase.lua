@@ -10,6 +10,24 @@ return {
             ((true) @cap)
             ((false) @cap)
             ]]
+        local rust_query = [[
+             ;; query
+             ((boolean_literal) @cap)
+             ((string_literal) @cap)
+             ; Identifiers
+             ((identifier) @cap)
+             ((field_identifier) @cap)
+             ((field_expression) @cap)
+             ((scoped_identifier) @cap)
+             ((unit_expression) @cap)
+             ; Types
+             ((reference_type) @cap)
+             ((primitive_type) @cap)
+             ((type_identifier) @cap)
+             ((generic_type) @cap)
+             ; Calls
+             ((call_expression) @cap)
+           ]]
         local python_query = [[
             ;; query
             ((identifier) @cap)
@@ -35,15 +53,14 @@ return {
             python = python_query,
             javascript = javascript_query,
             typescript = typescript_query,
+            rust = rust_query,
         }
 
-        vim.keymap.set({ "n", "s", "i" }, "<C-A-k>", function()
-            select_ease.select_node({
-                queries = queries,
-                direction = "previous",
-                vertical_drill_jump = true,
-            })
-        end, {})
+        vim.keymap.set({ "n", "s", "i" }, "<C-A-k>", function() select_ease.select_node({
+            queries = queries,
+            direction = "previous",
+            vertical_drill_jump = true,
+        }) end, {})
         vim.keymap.set({ "n", "s", "i" }, "<C-A-j>", function()
             select_ease.select_node({
                 queries = queries,
@@ -73,7 +90,7 @@ return {
             select_ease.select_node({ queries = queries, direction = "next" })
         end, {})
     end
-}    --select easy item and change it
+} --select easy item and change it
 
 
 
