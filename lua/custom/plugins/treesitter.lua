@@ -23,7 +23,7 @@ return {
 
   ensure_installed = "all",
 
-  ignore_install = {}, -- List of parsers to ignore installing
+  ignore_install = {"haskell","haskell_persistent"}, -- List of parsers to ignore installing
     highlight = {
       enable = true, -- false will disable the whole extension
       disable = {"yaml"}, -- list of language that will be disabled
