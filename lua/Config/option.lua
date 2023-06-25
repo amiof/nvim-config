@@ -29,7 +29,7 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 2
 
-----------------all confign of vim
+----------------all config of vim
 vim.opt.backup = false -- creates a backup file
 -- vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 -- vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
@@ -68,7 +68,7 @@ vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 -- vim.opt.relativenumber = false -- set relative numbered lines
 -- vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 -- vim.opt.signcolumn = "yes" -- always show the sign column otherwise it would shift the text each time
--- vim.opt.wrap = false -- display lines as one long line
+-- vim.opt.wrap = false -- display lines as one long line 
 -- vim.opt.spell = false
 -- vim.opt.spelllang = "en"
 -- vim.opt.scrolloff = 8 -- is one of my fav
@@ -79,8 +79,9 @@ vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 --code spell--------------------------------
 -- vim.o.spellfile = vim.o.runtimepath .. "/spell/en.utf-8.add"
 -- vim.env.SPELLHOME = vim.fn.stdpath("data") .. "/spell"
-vim.opt.spell = false
+vim.opt.spell = true
 vim.opt.spelllang = "en"
+vim.opt.spelloptions="camel"
 -----------------end code spell----------------------
 vim.opt.autowrite = true           -- Enable auto write
 vim.opt.clipboard = "unnamedplus"  -- Sync with system clipboard
