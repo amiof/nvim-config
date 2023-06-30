@@ -29,7 +29,7 @@ return {
                             text_aligin = "left",
                         }
                     },
-                    separator_style = "slant", --thin or slope or thick or slant padded_slant
+                    separator_style = "slope", --thin or slope or thick or slant padded_slant
                 }
             }
         end,
