@@ -39,11 +39,12 @@ return {
                 },
                 color_overrides = {},
                 -- custom_highlights = {},
+                custom_highlights = {},
                 integrations = {
                     cmp = true,
                     gitsigns = true,
                     nvimtree = true,
-                    telescope = true,
+                    -- telescope = true,
                     notify = false,
                     mini = false,
                 },
