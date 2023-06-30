@@ -21,6 +21,10 @@ local mappings = {
   u = { name = " 󰎟 delete all notification" },
   s = {
     name = "  serarch",
+    c={"<cmd>Telescope colorscheme<CR>", "Change [C]olorscheme"} ,
+    k={"<cmd>Telescope keymaps<CR>", "search [k]eymaps"},
+    C={"<cmd>Telescope commands<CR>", "search Commands"},
+    m={"<cmd>Telescope man_pages<CR>", "search [m]an_pages"}
   },
   c = {
     name = "  crate rust",
