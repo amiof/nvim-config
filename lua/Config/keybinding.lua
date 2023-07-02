@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>th", ":windo wincmd H<cr>", { desc = "change window
 vim.keymap.set("n", "<leader>ww", ":w<cr>", { desc = 'save buffer', silent = true })
 vim.keymap.set("n", "<leader>no", ":noh<cr>", { desc = 'clear search highlight', silent = true })
 vim.keymap.set("n", "<leader>qq", ":q!<cr>", { desc = "exit force", silent = true })
-vim.keymap.set("n", "<leader>wq", ":wq<cr>", { desc = "save and exit", silent = true })
+vim.keymap.set("n", "<leader>wq", ":wqa<cr>", { desc = "save all and exit", silent = true })
 vim.keymap.set("n", "|", ":split<cr>", { silent = true })
 vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", { desc = "new tabe", silent = true })
 vim.keymap.set("n", "<leader>tz", ":tabnew %<cr>", { desc = "tabe zoom", silent = true })
