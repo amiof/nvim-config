@@ -21,10 +21,10 @@ local mappings = {
   u = { name = " 󰎟 delete all notification" },
   s = {
     name = "  serarch",
-    c={"<cmd>Telescope colorscheme<CR>", "Change [C]olorscheme"} ,
-    k={"<cmd>Telescope keymaps<CR>", "search [k]eymaps"},
-    C={"<cmd>Telescope commands<CR>", "search Commands"},
-    m={"<cmd>Telescope man_pages<CR>", "search [m]an_pages"}
+    c = { "<cmd>Telescope colorscheme<CR>", "Change [C]olorscheme" },
+    k = { "<cmd>Telescope keymaps<CR>", "search [k]eymaps" },
+    C = { "<cmd>Telescope commands<CR>", "search Commands" },
+    m = { "<cmd>Telescope man_pages<CR>", "search [m]an_pages" }
   },
   c = {
     name = "  crate rust",
@@ -34,8 +34,8 @@ local mappings = {
   },
   t = {
     name = "  Tabs",
-   b={"toggle cureent line blame"},
-   d={"toggle deleted"},
+    b = { "toggle cureent line blame" },
+    d = { "toggle deleted" },
   },
   x = {
     name = "  Trouble",
@@ -44,7 +44,7 @@ local mappings = {
     name = "  quite"
   },
   l = {
-    name = "  dianotics",
+    name = "  diagnostics",
     t = { name = " 󰙨 [t]est whit neotest" }
   },
   h = {
@@ -55,7 +55,7 @@ local mappings = {
     R = { "reset buffer" },
     u = { "undo stage hunk" },
     S = { "stage buffer" },
-    p= {"previwe changes"},
+    p = { "previwe changes" },
 
   },
   r = {
@@ -63,11 +63,18 @@ local mappings = {
   },
   d = {
     name = "   document symbol",
-    b={"add [B]reakpoint for debug"}
+    b = { "add [B]reakpoint for debug" }
   },
   n = {
     name = "  disable search highlight"
   },
+  m = {
+    name = "   mind",
+    o = { "<cmd>MindOpenSmartProject <CR>","mind opne smart project" },
+    c = { "<cmd>MindClose <CR>","mind close" },
+    t = { "Telescope show media files" },
+
+  }
 
 
 
