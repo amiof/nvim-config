@@ -19,7 +19,7 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<cr>", { desc = "new tabe", silent = t
 vim.keymap.set("n", "<leader>tz", ":tabnew %<cr>", { desc = "tabe zoom", silent = true })
 vim.keymap.set("n", "<leader>tzo", ":tabclose<cr>", { desc = "zoom out tabe", silent = true })
 vim.keymap.set("n", "<leader>ss", ":Telescope git_files<cr>", { desc = 'git files search', silent = true })
-vim.keymap.set("n", "<leader>m", ":lua require('telescope').extensions.media_files.media_files()<cr>",
+vim.keymap.set("n", "<leader>mt", ":lua require('telescope').extensions.media_files.media_files()<cr>",
     { desc = 'telescope show media files', silent = true })
 
 
