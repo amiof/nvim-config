@@ -40,11 +40,6 @@ return {
       rainbow = {
         enable = true,
         extended_mode = true,
-        disable = { 'cpp' },
-        -- Which query to use for finding delimiters
-        query = 'rainbow-parens',
-        -- Highlight the entire buffer all at once
-        strategy = require('ts-rainbow').strategy.global,
       },
       autotag = {
         enable = true,
