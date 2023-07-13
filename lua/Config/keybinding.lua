@@ -115,3 +115,22 @@ vim.keymap.set('n', "<leader>ltS", ":lua require('neotest').summary.toggle()<cr>
 ---------------lazygit
 
 vim.keymap.set("n", "<leader>hg", ":LazyGit<cr>", { desc = 'open Lazygit', silent = true })
+
+
+
+---------------fold-preview
+local keymap = vim.keymap
+keymap.amend = require('keymap-amend')
+local map = require('fold-preview').mapping
+
+keymap.amend('n', 'h',  map.show_close_preview_open_fold)
+keymap.amend('n', 'l',  map.close_preview_open_fold)
+keymap.amend('n', 'k',  map.close_preview_without_defer)
+keymap.amend('n', 'j',  map.close_preview_without_defer)
+keymap.amend('n', 'zo', map.close_preview)
+keymap.amend('n', 'zO', map.close_preview)
+keymap.amend('n', 'zc', map.close_preview_without_defer)
+keymap.amend('n', 'zR', map.close_preview)
+keymap.amend('n', 'zM', map.close_preview_without_defer)
+
+-------------------------------end fold-preview
