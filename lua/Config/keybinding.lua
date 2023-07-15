@@ -47,8 +47,11 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>w', { noremap = true, silent = true 
 -- vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
 
 
-vim.keymap.set("n", "<leader>o", ":NeoTreeFloatToggle<CR>", { desc = "open neotree float", silent = true })
-vim.keymap.set("n", "<leader>e", ":NeoTreeShowToggle<CR>", { desc = "open neotree FileManger", silent = true })
+
+-- vim.keymap.set("n", "<leader>o", ":NeoTreeFloatToggle<CR>", { desc = "open neotree float", silent = true })
+vim.keymap.set("n", "<leader>o", ":Neotree float toggle<CR>", { desc = "open neotree float", silent = true })
+-- vim.keymap.set("n", "<leader>e", ":NeoTreeShowToggle<CR>", { desc = "open neotree FileManger", silent = true })
+vim.keymap.set("n", "<leader>e", ":Neotree left toggle<CR>", { desc = "open neotree FileManger", silent = true })
 --vim.keymap.set("n", "@", ":ZenMode<cr>", { silent = true })
 ----bindding neoscroll to pageup and ScrollWheelUp ....
 vim.cmd(":map <ScrollWheelUp> <C-u>")
@@ -134,3 +137,10 @@ vim.keymap.set("n", "<leader>hg", ":LazyGit<cr>", { desc = 'open Lazygit', silen
 -- keymap.amend('n', 'zM', map.close_preview_without_defer)
 --
 -- -------------------------------end fold-preview
+--
+--
+--
+----------------------------prettier
+vim.keymap.set("n", "<leader>p", ":Prettier<cr>", { desc = "prettier", silent = true })
+--
+--------------------------end prettier
