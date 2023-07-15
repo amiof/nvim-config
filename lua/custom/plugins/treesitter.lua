@@ -38,9 +38,15 @@ return {
       },
 
       rainbow = {
+        disable = { 'jsx', 'cpp','tsx' },
         enable = true,
         extended_mode = true,
-        -- max_file_lines = nil,
+        max_file_lines = nil,
+        -- list of languages you want to disable the plugin for
+        -- Which query to use for finding delimiters
+        -- query = 'rainbow-parens-react',
+        -- Highlight the entire buffer all at once
+        -- strategy = require('ts-rainbow').strategy.global,
       },
       autotag = {
         enable = true,
