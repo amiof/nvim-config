@@ -122,19 +122,19 @@ vim.keymap.set("n", "<leader>hg", ":LazyGit<cr>", { desc = 'open Lazygit', silen
 
 
 -- ---------------fold-preview
--- local keymap = vim.keymap
--- keymap.amend = require('keymap-amend')
--- local map = require('fold-preview').mapping
---
--- keymap.amend('n', 'h',  map.show_close_preview_open_fold)
--- keymap.amend('n', 'l',  map.close_preview_open_fold)
--- keymap.amend('n', 'k',  map.close_preview_without_defer)
--- keymap.amend('n', 'j',  map.close_preview_without_defer)
--- keymap.amend('n', 'zo', map.close_preview)
--- keymap.amend('n', 'zO', map.close_preview)
--- keymap.amend('n', 'zc', map.close_preview_without_defer)
--- keymap.amend('n', 'zR', map.close_preview)
--- keymap.amend('n', 'zM', map.close_preview_without_defer)
+local keymap = vim.keymap
+keymap.amend = require('keymap-amend')
+local map = require('fold-preview').mapping
+
+keymap.amend('n', 'h',  map.show_close_preview_open_fold)
+keymap.amend('n', 'l',  map.close_preview_open_fold)
+keymap.amend('n', 'k',  map.close_preview_without_defer)
+keymap.amend('n', 'j',  map.close_preview_without_defer)
+keymap.amend('n', 'zo', map.close_preview)
+keymap.amend('n', 'zO', map.close_preview)
+keymap.amend('n', 'zc', map.close_preview_without_defer)
+keymap.amend('n', 'zR', map.close_preview)
+keymap.amend('n', 'zM', map.close_preview_without_defer)
 --
 -- -------------------------------end fold-preview
 --
@@ -142,5 +142,6 @@ vim.keymap.set("n", "<leader>hg", ":LazyGit<cr>", { desc = 'open Lazygit', silen
 --
 ----------------------------prettier
 vim.keymap.set("n", "<leader>p", ":Prettier<cr>", { desc = "prettier", silent = true })
+--
 --
 --------------------------end prettier

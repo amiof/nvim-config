@@ -535,6 +535,7 @@ require("Config.option")
 require("Config.icons")
 require("Config.whichkey-config")
 require("kickstart.plugins.autoformat")
+require("Config.rainbowConfig")
 --themes
 vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "gruvbox-baby"
