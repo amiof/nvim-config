@@ -84,12 +84,18 @@ require('lazy').setup({
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
+      {
+        'williamboman/mason.nvim',
+        config = true,
+        build = ":MasonUpdate",
+        cmd = "Mason",
+        keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } }
+      },
       'williamboman/mason-lspconfig.nvim',
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', tag="legacy" ,     opts = {} },
+      { 'j-hui/fidget.nvim', tag = "legacy", opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -436,6 +442,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
+  --
 
   lua_ls = {
     Lua = {
@@ -453,7 +460,23 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Ensure the servers above are installed
+--
+local configMasonUi = function()
+  require("mason").setup({
+    ui = {
+      border = "rounded", -- set to "none" to remover border
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗"
+      }
+    },
+  })
+end
+configMasonUi()
+
 local mason_lspconfig = require 'mason-lspconfig'
+
 
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
@@ -465,9 +488,37 @@ mason_lspconfig.setup_handlers {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = servers[server_name],
+      automatic_installation = true,
     }
   end,
 }
+
+------for hand config for mason remvoe this config
+-- {
+--   "williamboman/mason-lspconfig.nvim",
+--
+--   config = function()
+--     require("mason-lspconfig").setup({
+--       ensure_installed = {
+--         "html",
+--         "cssls",
+--         "eslint",
+--         "tsserver",
+--         "emmet_ls",
+--         "jsonls",
+--         "pyright",
+--         "yamlls",
+--         "bashls",
+--         "tailwindcss",
+--         "prettier",
+--         "codespell",
+--         "flake8",
+--         "rust-analyzer",
+--       },
+--       automatic_installation = true,
+--     })
+--   end
+-- }
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
