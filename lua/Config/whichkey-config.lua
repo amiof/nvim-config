@@ -45,7 +45,8 @@ local mappings = {
   },
   l = {
     name = "  diagnostics",
-    t = { name = " 󰙨 [t]est whit neotest" }
+    t = { name = " 󰙨 [t]est whit neotest" },
+    s = { name = "  [l]sp[S]aga" }
   },
   h = {
     name = " 󰊢 git",

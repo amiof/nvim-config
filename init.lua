@@ -4,7 +4,7 @@
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 
-Kickstart.nvim is *not* a distribution.
+kickstart.nvim is *not* a distribution.
 
 Kickstart.nvim is a template for your own configuration.
   The goal is that you can read every line of code, top-to-bottom, and understand
@@ -316,7 +316,9 @@ vim.keymap.set("n", '<leader>sp', ":lua require'telescope'.extensions.projects.p
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
-
+  modules = {},
+  sync_install = true,
+  ignore_install = {},
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
 
@@ -413,6 +415,15 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
+  vim.keymap.set('n', '<leader>k', "<cmd>Lspsaga hover_doc<CR>", { silent = true,desc="lspsaga hover" })
+  vim.keymap.set('n', '<leader>lsf', "<cmd>Lspsaga finder<CR>", { silent = true,desc="lspsaga finder" })
+  vim.keymap.set('n', '<leader>lsn', "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true,desc="lspsaga diagnostic_jump_next" })
+  vim.keymap.set('n', '<leader>lst', "<cmd>Lspsaga term_toggle<CR>", { silent = true,desc="lspsaga term toggle" })
+  vim.keymap.set('n', '<leader>lsc', "<cmd>Lspsaga code_action<CR>", { silent = true,desc="lspsaga code_action" })
+  vim.keymap.set('n', '<leader>lsd', "<cmd>Lspsaga show_buf_diagnostics<CR>", { silent = true,desc="lspsaga show buffer diagnostic" })
+  vim.keymap.set('n', '<leader>lsg', "<cmd>Lspsaga goto_type_definition<CR>", { silent = true,desc="lspsaga goto type_definition" })
+  vim.keymap.set('n', '<leader>lsp', "<cmd>Lspsaga peek_definition <CR>", { silent = true,desc="lspsaga peek_definition" })
+  -- nmap('K',vim.lsp.handlers["textDocument/hover"] == vim.lsp.with(vim.lsp.handlers.hover ,{border="single"}), 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
