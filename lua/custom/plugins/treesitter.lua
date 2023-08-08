@@ -40,7 +40,7 @@ return {
       rainbow = {
         -- disable = { 'jsx', 'cpp','tsx' },
         enable = true,
-        extended_mode = true,
+        extended_mode = false,
         max_file_lines = nil,
         -- list of languages you want to disable the plugin for
         -- Which query to use for finding delimiters
