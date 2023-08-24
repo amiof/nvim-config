@@ -38,7 +38,7 @@ return {
 
     local branch = {
       "branch",
-      icon = "",
+      -- icon = "",
       separator = { left = "", right = "" },
       padding = 0.1,
       color = { bg = "#2a2c3f" },
@@ -234,23 +234,44 @@ return {
           {
             "filetype",
             icon_only = true,
-            colored = true,
-            padding = 1,
-            color = { bg = "#2a2c3f" },
-            separator = { left = "", right = " " },
+            colored = false,
+            color = { bg = "#ECD3A0", fg = "#000000" },
+            -- color = { bg = "#8FBCBB", fg = "#000000" },
+            -- color = { bg = "#2a2c3f" },
+            separator = { left = "",right = " " },
           },
           {
             "filename",
             file_status = false,
             padding = 0.3,
-            separator = { left = "", right = " " },
+            separator = {  right = " " },
+            -- color = { bg = "#ECD3A0", fg = "#000000" },
+            -- color = { bg = "#8FBCBB", fg = "#000000" },
             color = { bg = "#2a2c3f" },
           },
           spaces,
+          {
+            function()
+              return "   "
+            end,
+            separator = { left = "", right = " " },
+            -- color = { bg = "#86AAEC", fg = "#000000" },
+            color = { bg = "#8FBCBB", fg = "#000000" },
+            padding = 0.5,
+          },
           branch,
           diff,
         },
         lualine_x = {
+
+          {
+            function()
+              return "  "
+            end,
+            separator = { left = "", right = " " },
+            color = { bg = "#ECD3A0", fg = "#000000" },
+            padding = 0.7,
+          },
           diagnostics,
           {
             lsp_progess,
