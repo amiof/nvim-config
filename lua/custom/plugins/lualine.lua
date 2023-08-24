@@ -63,6 +63,14 @@ return {
 
     local location = {
       "location",
+      separator = { right = "" },
+      color = { bg = "#2a2c3f" },
+    }
+
+    local progress = {
+      "progress",
+      separator = { right = "" },
+      color = { bg = "#2a2c3f" },
     }
 
     local custom_icons = {
@@ -251,27 +259,30 @@ return {
             function()
               return "﬌"
             end,
-            separator = { left = "", right = "" },
+            separator = { left = "" },
             color = { bg = "#8FBCBB", fg = "#000000" },
-            padding = 0.3,
           },
           {
             indent,
+            separator = { right = "" },
+            color = { bg = "#2a2c3f" },
           },
+          spaces,
           {
             function()
-              return ""
+              return " "
             end,
-            separator = { left = "", right = "" },
+            separator = { left = "" },
             color = { bg = "#ECD3A0", fg = "#000000" },
-            padding = 0.3,
+            padding = 0.7,
           },
-          "progress",
+          progress,
+          spaces,
           {
             function()
               return " "
             end,
-            separator = { left = "", right = "" },
+            separator = { left = "" },
             color = { bg = "#86AAEC", fg = "#000000" },
             padding = 0.1,
           },
