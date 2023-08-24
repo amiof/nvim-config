@@ -34,6 +34,8 @@ return {
       },
       colored = true,
       always_visible = false,
+      color = { bg = "#2a2c3f" },
+      separator = { left = "" },
     }
 
     local branch = {
@@ -238,21 +240,20 @@ return {
             color = { bg = "#ECD3A0", fg = "#000000" },
             -- color = { bg = "#8FBCBB", fg = "#000000" },
             -- color = { bg = "#2a2c3f" },
-            separator = { left = "",right = " " },
+            separator = { left = "", right = " " },
           },
           {
             "filename",
             file_status = false,
             padding = 0.3,
-            separator = {  right = " " },
+            separator = { right = " " },
             -- color = { bg = "#ECD3A0", fg = "#000000" },
             -- color = { bg = "#8FBCBB", fg = "#000000" },
             color = { bg = "#2a2c3f" },
           },
-          spaces,
           {
             function()
-              return "   "
+              return " "
             end,
             separator = { left = "", right = " " },
             -- color = { bg = "#86AAEC", fg = "#000000" },
@@ -269,25 +270,27 @@ return {
               return "  "
             end,
             separator = { left = "", right = " " },
-            color = { bg = "#ECD3A0", fg = "#000000" },
+           color = { bg = "#8FBCBB", fg = "#000000" },
             padding = 0.7,
           },
           diagnostics,
           {
             lsp_progess,
-          },
-          {
-            function()
-              return "﬌"
-            end,
-            separator = { left = "" },
-            color = { bg = "#8FBCBB", fg = "#000000" },
-          },
-          {
-            indent,
-            separator = { right = "" },
             color = { bg = "#2a2c3f" },
+            separator = { left = "", right = "" },
           },
+          -- {
+          --   function()
+          --     return "﬌"
+          --   end,
+          --   separator = { left = "" },
+          --   color = { bg = "#8FBCBB", fg = "#000000" },
+          -- },
+          -- {
+          --   indent,
+          --   separator = { right = "" },
+          --   color = { bg = "#2a2c3f" },
+          -- },
           spaces,
           {
             function()
