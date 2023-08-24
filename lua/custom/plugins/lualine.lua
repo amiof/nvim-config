@@ -40,7 +40,8 @@ return {
       "branch",
       icon = "",
       separator = { left = "", right = "" },
-      padding = 0.1
+      padding = 0.1,
+      color = { bg = "#2a2c3f" },
     }
 
     local diff = {
@@ -52,6 +53,7 @@ return {
         removed = " ",
       },
       separator = { left = "", right = "" },
+      color = { bg = "#2a2c3f" },
     }
 
     local filetype = {
@@ -65,7 +67,53 @@ return {
 
     local custom_icons = {
       function()
-        return ""
+        -- return "     --before change this config this line only added
+        -- return "  "
+        local mode = function()
+          local mod = vim.fn.mode()
+          local _time = os.date "*t"
+
+          local selector = math.floor(_time.hour / 8) + 1
+          local normal_icons = {
+            "  ",
+            "  ",
+            "  ",
+          }
+          if mod == "n" or mod == "no" or mod == "nov" then
+            return normal_icons[selector]
+          elseif mod == "i" or mod == "ic" or mod == "ix" then
+            local insert_icons = {
+              "  ",
+              "  ",
+              "  ",
+            }
+            return insert_icons[selector]
+          elseif mod == "V" or mod == "v" or mod == "vs" or mod == "Vs" or mod == "cv" then
+            local verbose_icons = {
+              " 勇",
+              "  ",
+              "  ",
+            }
+            return verbose_icons[selector]
+          elseif mod == "c" or mod == "ce" then
+            local command_icons = {
+              "  ",
+              "  ",
+              "  ",
+            }
+
+            return command_icons[selector]
+          elseif mod == "r" or mod == "rm" or mod == "r?" or mod == "R" or mod == "Rc" or mod == "Rv" or mod == "Rv" then
+            local replace_icons = {
+              "  ",
+              "  ",
+              "  ",
+            }
+            return replace_icons[selector]
+          end
+          return normal_icons[selector]
+        end
+        return mode()
       end,
       separator = { left = "", right = "" },
     }
@@ -125,7 +173,7 @@ return {
         return registered
       end
 
-     function list_registered(filetype)
+      function list_registered(filetype)
         local registered_providers = list_registered_providers_names(filetype)
         local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
           return registered_providers[m] or {}
@@ -133,7 +181,7 @@ return {
         return providers_for_methods
       end
 
-     function formatters_list_registered(filetype)
+      function formatters_list_registered(filetype)
         local registered_providers = list_registered_providers_names(filetype)
         return registered_providers[null_ls.methods.FORMATTING] or {}
       end
@@ -190,6 +238,7 @@ return {
             separator = { left = "", right = " " },
             color = { bg = "#2a2c3f" },
           },
+          spaces,
           branch,
           diff,
         },
