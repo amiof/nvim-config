@@ -612,6 +612,7 @@ require("Config.icons")
 require("Config.whichkey-config")
 require("kickstart.plugins.autoformat")
 require("Config.rainbowConfig")
+require("lsp.init")
 --themes
 vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "gruvbox-baby"
@@ -625,3 +626,8 @@ vim.o.lazyredraw = true
 --for fix redrawtiem error
 -- vim.o.redrawtime = 10000
 -- vim.opt.re = 0
+vim.opt.listchars = {
+    tab = "   ",
+    trail = "-",
+    nbsp = "+",
+}
