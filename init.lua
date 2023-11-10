@@ -626,8 +626,3 @@ vim.o.lazyredraw = true
 --for fix redrawtiem error
 -- vim.o.redrawtime = 10000
 -- vim.opt.re = 0
-vim.opt.listchars = {
-    tab = "   ",
-    trail = "-",
-    nbsp = "+",
-}

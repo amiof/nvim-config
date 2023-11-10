@@ -114,8 +114,48 @@ local config = {
                 toString = {
                     template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
                 },
+
+            },
+            configuration = {
+                updateBuildConfiguration = "interactive",
+                -- runtimes = {
+                --     {
+                --         name = "JavaSE-11",
+                --         path = "~/.sdkman/candidates/java/11.0.17-tem",
+                --     },
+                --     {
+                --         name = "JavaSE-18",
+                --         path = "~/.sdkman/candidates/java/18.0.2-sem",
+                --     },
+                -- },
+            },
+            eclipse = {
+                downloadSources = true,
+            },
+            format = {
+                enabled = true,
+            },
+            implementationsCodeLens = { enabled = true },
+            inlayHints = {
+                parameterNames = {
+                    enabled = "all", -- literals, all, none
+                },
+            },
+            maven = {
+                downloadSources = true,
+            },
+            references = {
+                includeDecompiledSources = true,
+            },
+            referencesCodeLens = {
+                enabled = true,
+            },
+
+            redhat = {
+                telemetry = { enabled = false },
             },
         },
+
     },
 }
 
