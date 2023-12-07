@@ -129,28 +129,28 @@ local config = {
                 --     },
                 -- },
             },
-            eclipse = {
-                downloadSources = true,
-            },
+            -- eclipse = {
+            --     downloadSources = true,
+            -- },
             format = {
                 enabled = true,
             },
-            implementationsCodeLens = { enabled = true },
-            inlayHints = {
-                parameterNames = {
-                    enabled = "all", -- literals, all, none
-                },
-            },
-            maven = {
-                downloadSources = true,
-            },
-            references = {
-                includeDecompiledSources = true,
-            },
-            referencesCodeLens = {
-                enabled = true,
-            },
-
+            -- implementationsCodeLens = { enabled = true },
+            -- inlayHints = {
+            --     parameterNames = {
+            --         enabled = "all", -- literals, all, none
+            --     },
+            -- },
+            -- maven = {
+            --     downloadSources = true,
+            -- },
+            -- references = {
+            --     includeDecompiledSources = true,
+            -- },
+            -- referencesCodeLens = {
+            --     enabled = true,
+            -- },
+            --
             redhat = {
                 telemetry = { enabled = false },
             },
