@@ -430,7 +430,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', '<leader>lsn', "<cmd>Lspsaga diagnostic_jump_next<CR>",
         { silent = true, desc = "lspsaga diagnostic_jump_next" })
     vim.keymap.set('n', '<leader>lst', "<cmd>Lspsaga term_toggle<CR>", { silent = true, desc = "lspsaga term toggle" })
-    vim.keymap.set('n', '<leader>lsc', "<cmd>Lspsaga code_action<CR>", { silent = true, desc = "lspsaga code_action" })
+    vim.keymap.set('n', 'gF', "<cmd>Lspsaga code_action<CR>", { silent = true, desc = "lspsaga code_action" })
     vim.keymap.set('n', '<leader>lsd', "<cmd>Lspsaga show_buf_diagnostics<CR>",
         { silent = true, desc = "lspsaga show buffer diagnostic" })
     vim.keymap.set('n', '<leader>lsg', "<cmd>Lspsaga goto_type_definition<CR>",
