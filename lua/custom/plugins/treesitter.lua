@@ -26,7 +26,7 @@ return {
       ignore_install = { "haskell", "haskell_persistent" }, -- List of parsers to ignore installing
       highlight = {
         enable = true,                                      -- false will disable the whole extension
-        disable = { "yaml" },                               -- list of language that will be disabled
+        disable = {  },                               -- list of language that will be disabled
         additional_vim_regex_highlighting = true,
       },
       autopairs = {
