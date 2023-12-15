@@ -613,6 +613,7 @@ require("Config.whichkey-config")
 require("kickstart.plugins.autoformat")
 require("Config.rainbowConfig")
 require("lsp.init")
+require("lsp.masonConfig")
 --themes
 vim.cmd.colorscheme "tokyonight-night"
 -- vim.cmd.colorscheme "gruvbox-baby"
