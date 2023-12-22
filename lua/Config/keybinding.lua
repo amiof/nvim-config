@@ -145,3 +145,12 @@ vim.keymap.set("n", "<leader>p", ":Prettier<cr>", { desc = "prettier", silent = 
 --
 --
 --------------------------end prettier
+----------- angular ng plugin config
+-- local opts = { noremap = true, silent = true }
+local ng = require("ng");
+vim.keymap.set("n", "<leader>nt", ng.goto_template_for_component,
+    { desc = "go to template for Component ", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>nc", ng.goto_component_with_template_file,
+    { desc = "go to Component with template", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>nT", ng.get_template_tcb, { desc = "get template tcb", noremap = true, silent = true })
+------------end angular ng config

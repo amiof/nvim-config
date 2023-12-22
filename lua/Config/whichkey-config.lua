@@ -67,7 +67,7 @@ local mappings = {
     b = { "add [B]reakpoint for debug" }
   },
   n = {
-    name = "  disable search highlight"
+    name = " 󰚲 angular"
   },
   m = {
     name = "   mind",
