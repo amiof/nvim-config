@@ -600,6 +600,7 @@ require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/typescr
 require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/rust" } }
 require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/python" } }
 require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/vue" } }
+require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets/angular" } }
 ls.filetype_extend("all", { "_" })
 
 
