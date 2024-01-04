@@ -154,3 +154,10 @@ vim.keymap.set("n", "<leader>nc", ng.goto_component_with_template_file,
     { desc = "go to Component with template", noremap = true, silent = true })
 vim.keymap.set("n", "<leader>nT", ng.get_template_tcb, { desc = "get template tcb", noremap = true, silent = true })
 ------------end angular ng config
+--
+--
+------inline hints
+vim.keymap.set("n", "<leader>th", ":lua require('lsp-inlayhints').toggle()<cr>",
+    { desc = 'toggle inlayhints', silent = true })
+vim.keymap.set("n", "<leader>tr", ":lua require('lsp-inlayhints').reset()<cr>",
+    { desc = 'reset inlayhints', silent = true })
