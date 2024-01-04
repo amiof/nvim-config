@@ -1,16 +1,15 @@
 local _jdtls, jdtls = pcall(require, "lsp.configs.jdtls")
 if _jdtls and type(jdtls) ~= "boolean" then
-
-vim.opt.listchars = {
-    tab = "┊ ",
-    trail = "-",
-    nbsp = "+",
-}
-  vim.api.nvim_create_autocmd({ "FileType" }, {
-    pattern = "java",
-    callback = jdtls.start,
-    desc = "Starting Java language server",
-  })
+	vim.opt.listchars = {
+		tab = "┊ ",
+		trail = "-",
+		nbsp = "+",
+	}
+	vim.api.nvim_create_autocmd({ "FileType" }, {
+		pattern = "java",
+		callback = jdtls.start,
+		desc = "Starting Java language server",
+	})
 end
 
 local capabilities = require("lsp.handlers").capabilities
@@ -95,4 +94,33 @@ if _lspconfig then
 
 	-- VUE
 	lspconfig.vuels.setup({})
+
+	lspconfig.tsserver.setup({
+		settings = {
+			typescript = {
+				inlayHints = {
+					includeInlayParameterNameHints = 'all',
+					includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+					includeInlayFunctionParameterTypeHints = true,
+					includeInlayVariableTypeHints = true,
+					includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+					includeInlayPropertyDeclarationTypeHints = true,
+					includeInlayFunctionLikeReturnTypeHints = true,
+					includeInlayEnumMemberValueHints = true,
+				}
+			},
+			javascript = {
+				inlayHints = {
+					includeInlayParameterNameHints = 'all',
+					includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+					includeInlayFunctionParameterTypeHints = true,
+					includeInlayVariableTypeHints = true,
+					includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+					includeInlayPropertyDeclarationTypeHints = true,
+					includeInlayFunctionLikeReturnTypeHints = true,
+					includeInlayEnumMemberValueHints = true,
+				}
+			}
+		}
+	})
 end
