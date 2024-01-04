@@ -146,7 +146,7 @@ require('lazy').setup({
         'navarasu/onedark.nvim',
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme 'onedark'
+            -- vim.cmd.colorscheme 'onedark'
         end,
     },
 
@@ -617,6 +617,7 @@ require("lsp.init")
 require("lsp.masonConfig")
 --themes
 vim.cmd.colorscheme "tokyonight-night"
+-- vim.cmd.colorscheme "cyberdream"
 -- vim.cmd.colorscheme "gruvbox-baby"
 -- vim.cmd.colorscheme "lunar"
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "bug", linehl = "", numhl = "" })
