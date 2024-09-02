@@ -157,7 +157,7 @@ vim.keymap.set("n", "<leader>nT", ng.get_template_tcb, { desc = "get template tc
 --
 --
 ------inline hints
-vim.keymap.set("n", "<leader>th", ":lua require('lsp-inlayhints').toggle()<cr>",
+vim.keymap.set("n", "<leader>tg", ":lua require('lsp-inlayhints').toggle()<cr>",
     { desc = 'toggle inlayhints', silent = true })
 vim.keymap.set("n", "<leader>tr", ":lua require('lsp-inlayhints').reset()<cr>",
     { desc = 'reset inlayhints', silent = true })

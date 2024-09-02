@@ -1,7 +1,7 @@
 return {
     {
         'akinsho/bufferline.nvim',
-        version = "v3.*",
+        version = "v4.*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             vim.opt.termguicolors = true
@@ -29,7 +29,7 @@ return {
                             text_aligin = "left",
                         }
                     },
-                    separator_style = "slope", --thin or slope or thick or slant padded_slant
+                    separator_style = "thin", --thin or slope or thick or slant padded_slant
                 }
             }
         end,

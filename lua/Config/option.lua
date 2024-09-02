@@ -15,7 +15,6 @@ vim.opt.termguicolors = true  -- set term gui colors (most terminals support thi
 vim.opt.hidden = true         -- required to keep multiple buffers and open multiple buffers
 vim.opt.showmode = true       -- we don't need to see things like -- INSERT -- anymore
 vim.opt.termbidi = true
-vim.opt.termguicolors = true
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 -- vim.opt.foldlevel = 1
 vim.opt.arabicshape = true

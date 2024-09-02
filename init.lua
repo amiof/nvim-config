@@ -624,6 +624,7 @@ vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "bug", linehl = "",
 vim.cmd("highlight bug guifg=#ff0000")
 vim.fn.sign_define("DapStopped", { text = " ", texthl = "arrow", linehl = "", numhl = "" })
 vim.cmd("highlight arrow guifg=#ffff00")
+require('transparent').clear_prefix('BufferLine')
 --for laggy move
 vim.o.lazyredraw = true
 --for fix redrawtiem error
