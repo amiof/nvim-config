@@ -48,9 +48,9 @@ return {
         -- Highlight the entire buffer all at once
         -- strategy = require('ts-rainbow').strategy.global,
       },
-      autotag = {
-        enable = true,
-      },
+      -- autotag = {
+      --   enable = true,
+      -- },
 
       sync_install = false,
     }
