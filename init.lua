@@ -567,7 +567,8 @@ cmp.setup {
         },
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
-                cmp.select_next_item()
+                -- cmp.select_next_item()
+                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
             elseif luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
             else
@@ -576,7 +577,8 @@ cmp.setup {
         end, { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
-                cmp.select_prev_item()
+                -- cmp.select_prev_item()
+                cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
             elseif luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             else
@@ -587,6 +589,10 @@ cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = "path" },
+        { name = "nvim_lua" },
+        { name = "buffer" },
+        { name = 'nvim_lsp_signature_help' },
     },
 }
 
